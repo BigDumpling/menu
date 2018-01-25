@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+
+<generatorConfiguration>
+    <!--<properties resource="file:///D:/ebyf/payment/payment-dal/src/main/resources/autogen/generatorConfig.properties"/> -->
+    <classPathEntry
+            location="D:\Work\ebyf-config\mysql-connector-java-5.1.41-bin.jar"/>
+
+    <context id="mybatis" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.ligq.example.menu.util.MyMapper"/>
+        </plugin>
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="false"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/cert?allowMultiQueries=true&amp;useLocalSessionState=true&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="com.ligq.example.menu.model.menu"
+                            targetProject="src/main/java"/>
+        <sqlMapGenerator targetPackage="mapper.menu"
+                         targetProject="src/main/resources"/>
+        <javaClientGenerator targetPackage="com.ligq.example.menu.mapper.menu"
+                             targetProject="src/main/java" type="XMLMAPPER"/>
+        <table tableName="%">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        <!--
+        <table tableName="tbl%">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        -->
+        <!--
+        <table tableName="tbl1"
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+        -->
+    </context>
+</generatorConfiguration>
+
