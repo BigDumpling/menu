@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ligq.example.menu.mapper.ebyf.TMenuOperatorMapper">
+  <resultMap id="BaseResultMap" type="com.ligq.example.menu.model.ebyf.TMenuOperator">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="mobile_phone" jdbcType="VARCHAR" property="mobilePhone" />
+    <result column="system_id" jdbcType="INTEGER" property="systemId" />
+    <result column="status" jdbcType="BIT" property="status" />
+    <result column="order_no" jdbcType="INTEGER" property="orderNo" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modifier" jdbcType="VARCHAR" property="modifier" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="login_ip" jdbcType="VARCHAR" property="loginIp" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="login_time" jdbcType="TIMESTAMP" property="loginTime" />
+    <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+  </resultMap>
+</mapper>

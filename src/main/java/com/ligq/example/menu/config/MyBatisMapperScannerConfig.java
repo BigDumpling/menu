@@ -19,11 +19,25 @@ import java.util.Properties;
 @AutoConfigureAfter(value = MybatisConfig.class)
 public class MyBatisMapperScannerConfig {
 
-    @Bean
-    public MapperScannerConfigurer mapperScannerConfigurer() {
+    @Bean(name = "menuMapperScannerConfigurer")
+    public MapperScannerConfigurer menuMapperScannerConfigurer() {
         MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
         mapperScannerConfigurer.setSqlSessionFactoryBeanName("sqlSessionFactory");
         mapperScannerConfigurer.setBasePackage("com.ligq.example.menu.mapper.menu");
+
+        Properties properties = new Properties();
+        properties.setProperty("mappers", MyMapper.class.getName());
+        properties.setProperty("notEmpty", "false");
+        properties.setProperty("IDENTITY", "MYSQL");
+        mapperScannerConfigurer.setProperties(properties);
+        return mapperScannerConfigurer;
+    }
+
+    @Bean(name = "ebyfMapperScannerConfigurer")
+    public MapperScannerConfigurer ebyfMapperScannerConfigurer() {
+        MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
+        mapperScannerConfigurer.setSqlSessionFactoryBeanName("ebyfSqlSessionFactory");
+        mapperScannerConfigurer.setBasePackage("com.ligq.example.menu.mapper.ebyf");
 
         Properties properties = new Properties();
         properties.setProperty("mappers", MyMapper.class.getName());

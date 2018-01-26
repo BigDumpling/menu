@@ -6,3 +6,19 @@ spring:
       username: root
       password: root
       driver-class-name: com.mysql.jdbc.Driver
+    ebyf:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://172.16.89.141:3306/ebyf_menu?allowMultiQueries=true&amp;useLocalSessionState=true&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull
+      username: root
+      password: ebyf8888
+      driver-class-name: com.mysql.jdbc.Driver
+
+logging:
+  level:
+    root: debug
+    com:
+      alibaba: debug
+    tk:
+      mybatis: debug
+
+
