@@ -8,9 +8,10 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
     ebyf:
       type: com.alibaba.druid.pool.DruidDataSource
-      url: jdbc:mysql://172.16.89.141:3306/ebyf_menu?allowMultiQueries=true&amp;useLocalSessionState=true&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull
+#      url: jdbc:mysql://172.16.89.141:3306/ebyf_menu?allowMultiQueries=true&amp;useLocalSessionState=true&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://127.0.0.1:3306/menu?allowMultiQueries=true&amp;useLocalSessionState=true&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull
       username: root
-      password: ebyf8888
+      password: root
       driver-class-name: com.mysql.jdbc.Driver
 
 logging:

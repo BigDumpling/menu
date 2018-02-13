@@ -1,5 +1,6 @@
 package com.ligq.example.menu.service.impl;
 
+import com.ligq.example.menu.mapper.ebyf.EbyfCustomMapper;
 import com.ligq.example.menu.mapper.ebyf.TMenuRoleResourceMapper;
 import com.ligq.example.menu.model.ebyf.TMenuRoleResource;
 import com.ligq.example.menu.service.EbyfRoleResourceService;
@@ -21,10 +22,13 @@ import java.util.List;
 public class EbyfRoleResourceServiceImpl implements EbyfRoleResourceService {
 
     private TMenuRoleResourceMapper tMenuRoleResourceMapper;
+    private EbyfCustomMapper ebyfCustomMapper;
 
     @Autowired
-    public EbyfRoleResourceServiceImpl(TMenuRoleResourceMapper tMenuRoleResourceMapper) {
+    public EbyfRoleResourceServiceImpl(TMenuRoleResourceMapper tMenuRoleResourceMapper,
+                                       EbyfCustomMapper ebyfCustomMapper) {
         this.tMenuRoleResourceMapper = tMenuRoleResourceMapper;
+        this.ebyfCustomMapper = ebyfCustomMapper;
     }
 
     @Override
@@ -36,5 +40,13 @@ public class EbyfRoleResourceServiceImpl implements EbyfRoleResourceService {
     public int insertList(List<TMenuRoleResource> list) {
         log.info("EbyfRoleResourceService.insertList() size == {}", list.size());
         return tMenuRoleResourceMapper.insertList(list);
+    }
+
+    @Override
+    public int insert(TMenuRoleResource t) {
+        log.info("EbyfRoleResourceService.insert() t == {}", t);
+        int i = ebyfCustomMapper.insert(t);
+        log.info("EbyfRoleResourceService.insert() t.id == {}", t.getId());
+        return i;
     }
 }

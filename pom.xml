@@ -76,6 +76,11 @@
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>1.2.3</version>
 		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-typehandlers-jsr310</artifactId>
+			<version>1.0.2</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -104,6 +109,11 @@
 						<groupId>tk.mybatis</groupId>
 						<artifactId>mapper</artifactId>
 						<version>3.4.3</version>
+					</dependency>
+					<dependency>
+						<groupId>org.mybatis</groupId>
+						<artifactId>mybatis-typehandlers-jsr310</artifactId>
+						<version>1.0.2</version>
 					</dependency>
 				</dependencies>
 			</plugin>

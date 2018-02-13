@@ -1,4 +1,4 @@
-package com.ligq.example.menu;
+package com.ligq.example.menu.api;
 
 import com.ligq.example.menu.model.ebyf.TMenuResource;
 import com.ligq.example.menu.model.menu.TbResource;

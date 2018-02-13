@@ -19,20 +19,20 @@
             <property name="suppressAllComments" value="false"/>
         </commentGenerator>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://172.16.89.141:3306/ebyf_menu?allowMultiQueries=true&amp;useLocalSessionState=true&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/cert?allowMultiQueries=true&amp;useLocalSessionState=true&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull"
                         userId="root"
-                        password="ebyf8888">
+                        password="root">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="true"/>
         </javaTypeResolver>
-        <javaModelGenerator targetPackage="com.ligq.example.menu.model.ebyf"
+        <javaModelGenerator targetPackage="com.ligq.example.menu.model.menu"
                             targetProject="src/main/java"/>
-        <sqlMapGenerator targetPackage="mapper.ebyf"
-                         targetProject="src/main/resources"/>
-        <javaClientGenerator targetPackage="com.ligq.example.menu.mapper.ebyf"
-                             targetProject="src/main/java" type="XMLMAPPER"/>
-        <table tableName="%">
+        <!--<sqlMapGenerator targetPackage="mapper.menu"-->
+                         <!--targetProject="src/main/resources"/>-->
+        <!--<javaClientGenerator targetPackage="com.ligq.example.menu.mapper.menu"-->
+                             <!--targetProject="src/main/java" type="XMLMAPPER"/>-->
+        <table tableName="t_menu_role">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>
         <!--

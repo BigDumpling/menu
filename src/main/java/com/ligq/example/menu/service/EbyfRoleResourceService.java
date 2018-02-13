@@ -15,4 +15,6 @@ public interface EbyfRoleResourceService {
     List<TMenuRoleResource> findAll();
 
     int insertList(List<TMenuRoleResource> list);
+
+    int insert(TMenuRoleResource t);
 }

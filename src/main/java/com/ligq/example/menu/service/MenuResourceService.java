@@ -15,4 +15,6 @@ public interface MenuResourceService {
     List<TbResource> findAll();
 
     List<TbResource> findBySystemId(String systemId);
+
+    TbResource findById(String id);
 }
